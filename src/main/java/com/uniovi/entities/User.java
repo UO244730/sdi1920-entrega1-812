@@ -25,6 +25,10 @@ public class User {
 		this.name = name;
 		this.lastName = lastName;
 	}
+	
+	public User() {
+		
+	}
 	public String getEmail() {
 		return email;
 	}
