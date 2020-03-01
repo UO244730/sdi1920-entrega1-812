@@ -48,5 +48,11 @@ public class UsersService {
 	public User getUserByEmail(String email) {
 		return userRepository.findByEmail(email);
 	}
+	
+	public List<User> searchByNameSurnameAndEmail(String searchtext){
+		List<User> users = new ArrayList<User>();
+		users = userRepository.searchByNameSurnameAndEmail(searchtext);
+		return users;
+	}
 
 }
