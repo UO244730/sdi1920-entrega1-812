@@ -93,4 +93,10 @@ public class UserController {
 	public String home(Model model) {
 		return "home";
 	}
+	@RequestMapping("/user/addFriend/{id}")
+	public String addFriend(@PathVariable Long id) {
+		//usersService.addFriend(id);
+		System.out.println("enviada petición a "+id);
+		return "redirect:/user/list";
+	}
 }

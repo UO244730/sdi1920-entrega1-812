@@ -12,6 +12,6 @@ public interface UserRepository extends CrudRepository<User, Long>{
 	User findByEmail(String email);
 	
 	//añadir apellido y email
-	@Query("Select r FROM User r WHERE (LOWER(r.name) LIKE LOWER (?1)")
+	@Query("Select r FROM User r WHERE (LOWER(r.name) LIKE LOWER (?1))")
 	List<User> searchByNameSurnameAndEmail(String searchtext);
 }
